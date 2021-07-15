@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>规则</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        .width input {
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="#">any-hover</a>
+
+    <hr>
+    <div>
+        @media aspect-ratio
+        <div>
+            <div class="width">
+                <label>width</label>
+                <span id="widthVal"></span>
+                <input type="range" name="" id="width" min="0" max="250">
+            </div>
+            <div class="height">
+                <label>height</label>
+                <span id="heightVal"></span>
+                <input type="range" name="" id="height" min="0" max="250">
+            </div>
+        </div>
+        <iframe src="./iframe.html" id="iframe"></iframe>
+    </div>
+   
+    <script>
+        let w = document.getElementById('width');
+        let h = document.getElementById('height');
+
+        let wVal = document.getElementById('widthVal')
+        let hVal = document.getElementById('heightVal');
+
+        let iframe = document.getElementById('iframe')
+
+        wVal.innerHTML = w.value;
+        hVal.innerHTML = h.value;
+        iframe.style.width = w.value + 'px';
+        iframe.style.height = h.value + 'px';
+
+
+        w.addEventListener('change', function(ev) {
+            let val =  ev.target.value;
+            wVal.innerHTML = val;
+            iframe.style.width = val + 'px';
+        }, false)
+
+        h.addEventListener('change', function(ev) {
+            let val =  ev.target.value;
+            hVal.innerHTML = val;
+            iframe.style.height = val + 'px';
+        }, false)
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+/* 字符编码规则 */
+/* @charset "UTF-8";  */
+
+/* 引入外部样式表 */
+/* @import url("./import.css"); */
+
+/* 媒体特性 */
+
+/*  screen 根据屏幕尺寸 */
+@media screen and (max-width: 1600px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: brown;
+  }
+}
+
+/* 检测当前节点是否被hover 类型伪类:hover */
+@media (any-hover: hover) {
+  a:hover {
+    background-color: yellow;
+  }
+}
+
+

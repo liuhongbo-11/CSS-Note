@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    
+    <style>
+        /* 匹配某个属性 */
+        input[type] {
+            border: 1px solid red
+        }
+
+        input[type='button'] {
+            padding: 10px;
+        }
+
+        /* 匹配某属性以ty开头的元素 */
+        input[type^="te"] {
+            color: red;
+        }
+
+
+        /* 匹配某属性以ty结尾的元素 */
+        input[type$="on"] {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <h4>属性选择器</h4>
+    <input type="text">
+    <input type="text">
+    <input>
+    <input type="button" value="submit" id="submit">
+
+    <script>
+        let btn = document.getElementById('submit')
+        btn.onclick = function () {
+            window.print()
+        }
+    </script>
+</body>
+
+</html>
