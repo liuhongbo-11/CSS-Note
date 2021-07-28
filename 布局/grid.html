@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .wrapper {
+            display: grid;
+            width: 450px;
+            height: 450px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            /* 设置行 */
+            grid-template-columns: 150px 150px 150px;
+            /* grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-template-columns: 100px 50% auto;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 200px 1fr 1fr;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(3, 100px);
+
+            grid-template-columns: [c1] 150px [c2] 150px [c3] 150px;
+            grid-template-columns: [c1] 150px [cl2 cr2] 150px 150px; */
+
+            /* 设置列 */
+            grid-template-rows: repeat(3, 1fr);
+
+            /* ----------间距------------ */
+            /* 列间距 */
+            column-gap: 10px;
+
+            /* 行间距 */
+            row-gap: 10px;
+
+            /* 间距简写 row column*/
+            gap: 10px 10px;
+
+
+            /* 网格水平呈现方式 */
+            justify-content: end;
+        }
+
+        .wrapper div {
+            border: 2px dashed pink;
+        }
+
+        .area {
+            display: grid;
+            width: 400px;
+            height: 450px;
+            border: 1px solid rgba(0, 0, 0, 1);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            /* 设置区域 别名 */
+            grid-template-areas:
+                "葡萄 葡萄 葡萄"
+                "龙虾 养鱼 养鱼"
+                "龙虾 养鱼 养鱼"
+                "西瓜 西瓜 西瓜";
+        }
+
+        .area div {
+            border: 1px dashed pink;
+            text-align: center;
+        }
+
+        .putao {
+            grid-area: 葡萄;
+        }
+
+        .longxia {
+            grid-area: 龙虾;
+        }
+
+        .yangyu {
+            grid-area: 养鱼;
+        }
+
+        .xigua {
+            grid-area: 西瓜;
+        }
+        .demo {
+            display: grid;
+            width: 450px;
+            height: 450px;
+            background-color: gray;
+            
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "red red green"
+                "blue pink pink"
+                "blue yellow yellow"
+            ;
+            gap: 4px;
+           justify-content: center;
+        }
+
+        .red {
+            grid-area: red;
+            background-color: red;
+        }
+        .green {
+            grid-area: green;
+            background-color: green;
+        }
+
+        .blue {
+            grid-area: blue;
+            background-color: blue;
+        }
+        .pink {
+            grid-area: pink;
+            background-color: pink;
+        }
+        .yellow {
+            grid-area: yellow;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="five">4</div>
+        <div class="six">5</div>
+        <div class="one">6</div>
+        <div class="two">7</div>
+        <div class="three">8</div>
+        <div class="three">9</div>
+    </div>
+    <div class="area">
+        <div class="putao">葡萄种植区</div>
+        <div class="longxia">龙虾养殖区</div>
+        <div class="yangyu">鱼类养殖区</div>
+        <div class="xigua">西瓜种植区</div>
+    </div>
+
+    <div class="demo">
+        <div class="red">
+            <img src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" alt="" width="100px" height="100px">
+        </div>
+        <div class="green">2</div>
+        <div class="blue">3</div>
+        <div class="pink">4</div>
+        <div class="yellow">5</div>
+    </div>
+</body>
+
+</html>

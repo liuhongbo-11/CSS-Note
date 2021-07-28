@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* flex布局实现圣杯布局 */
+        .layout-1 {
+            height: 300px;
+            display: flex;
+        }
+
+        .layout-1 .left,
+        .layout-1 .right {
+            width: 150px;
+        }
+
+        .layout-1 .left {
+            background-color: pink;
+        }
+
+        .layout-1 .right {
+            background-color: green;
+        }
+
+        .layout-1 .center {
+            width: 100%;
+            hyphens: auto;
+
+        }
+
+        .layout-2 {
+            height: 300px;
+            display: grid;
+            grid-template-columns: 150px auto 150px;
+            grid-template-rows: auto;
+        }
+
+
+        .layout-2 .left {
+            background-color: pink;
+        }
+
+        .layout-2 .right {
+            background-color: green;
+        }
+
+        .layout-2 .center {
+            width: 100%;
+            hyphens: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--圣杯布局 两边等宽中间自适应-->
+    <!-- flex布局 -->
+    <div class="layout-1">
+        <div class="left">
+            left
+        </div>
+        <div class="center">
+            Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+            min-content, with a max-width of 11em.
+            Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+            min-content, with a max-width of 11em.
+        </div>
+        <div class="right">
+            right
+        </div>
+    </div>
+    <hr>
+    <div class="layout-2">
+        <div class="left">
+            left
+        </div>
+        <div class="center">
+            Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+            min-content, with a max-width of 11em.
+            Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+            min-content, with a max-width of 11em.
+        </div>
+        <div class="right">
+            right
+        </div>
+    </div>
+</body>
+
+</html>

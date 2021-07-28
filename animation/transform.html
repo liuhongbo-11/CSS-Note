@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 2px solid red;
+            margin: 0 auto;
+
+            /* ----------------------rotate 旋转--------------------------- */
+            /* 旋转属性 运动为顺时针 值为角度*/
+            transform: rotate(0deg);
+            /* 3D旋转 */
+            /* transform: rotate3d(x, y, z, 45deg); */
+
+            /* X轴旋转 上下旋转*/
+            transform: rotateX(180deg);
+
+            /* Y轴旋转 左右旋转 */
+            transform: rotateY(180deg);
+
+            /* Z轴旋转 效果类似于rotate 值为正，则为顺时针旋转; 值为负，则为逆时针旋转 */
+            transform: rotateZ(0deg);
+
+            /* ----------------------scale 缩放--------------------------- */
+
+            /* 2D空间缩放 */
+            transform: scale(2);
+
+            /* 3D空间缩放 */
+            transform: scale3d(2, 2, 2);
+
+            /*  X轴缩放 */
+            transform: scaleX(2);
+
+            /* Y轴缩放 */
+            transform: scaleY(1.5);
+
+            /* Z轴缩放 类似与scale 效果 */
+            transform: scaleZ(1);
+
+            /* ----------------------skew 拉伸或平移--------------------------- */
+            /*transform: skew(10deg);*/
+
+            /* 水平拉伸 */
+            /*transform: skewX(100deg);*/
+
+            /*  垂直拉伸  */
+            /*transform: skewY(100deg);*/
+
+            /* ----------------------translate 移动元素在平面上的位置--------------------------- */
+            /*相较于自己之前的位置的平移量 类似于与position*/
+            transform: translate(100px, 100px);
+
+            /*水平平移量*/
+            transform: translateX(200px);
+
+            /*垂直平移量*/
+            transform: translateY(200px);
+
+            /*空间平移量*/
+            transform: translateZ(100px);
+
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <div>
+        transform
+    </div>
+</div>
+</body>
+
+</html>

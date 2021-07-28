@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+    <style>
+        /* 单词是否换行 */
+        .hyphens {
+            hyphens: manual
+        }
+
+        /* 字母之间的间距 */
+        .letter-spacing {
+            letter-spacing: 4px;
+        }
+
+        /* 超出宽度换行 */
+        .overflow-wrap {
+            width: 150px;
+            background-color: burlywood;
+            overflow-wrap: break-word;
+        }
+
+        /* 描述的是一段文本中最后一行在被强制换行之前的对齐规则 */
+        .text-align-last {
+            text-align-last: center;
+        }
+
+        /* 定义一个块元素首行文本内容之前的缩进量 */
+        .text-indent {
+            /* text-indent: 20%; */
+            text-indent: 4em;
+        }
+
+        /* 制定文本的大小写  */
+        .text-transform {
+            /* 小写 */
+            text-transform: uppercase;
+
+            /* 大写 */
+            text-transform: lowercase;
+
+            /* 首字母大写 */
+            text-transform: capitalize;
+        }
+
+        /* 单词之间的间距 */
+        .word-sapcing {
+            word-spacing: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hyphens">
+        The "hard" hyphen character indicates a visible line break opportunity. Even if the line is not actually broken
+        hellow at that point, the hyphen is still rendered.
+    </p>
+    <hr>
+    <p class="letter-spacing"> The "hard" hyphen character indicates a visible line break opportunity. Even if the line
+        is not actually broken hellow at that point, the hyphen is still rendered.
+    </p>
+    <hr>
+    <p class="overflow-wrap">
+        Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+        min-content, with a max-width of 11em.
+    </p>
+    <hr>
+    <p class="text-align-last">
+        Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+        min-content, with a max-width of 11em.
+    </p>
+    <hr>
+    <p class="text-indent">
+        Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+        min-content, with a max-width of 11em.
+    </p>
+    <hr>
+    <p class="text-transform">
+        Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+        min-content, with a max-width of 11em.
+    </p>
+    <p class="word-sapcing">
+        Most words are short & don't need to break. But Antidisestablishmentarianism is long. The width is set to
+        min-content, with a max-width of 11em.
+    </p>
+
+
+
+
+
+
+</body>
+
+</html>
