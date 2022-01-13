@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+
+    <style>
+      * {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ol {
+        /* width: 300px; */
+        height: 150px;
+        padding: 12px;
+
+        border: 1px solid pink;
+        display: flex;
+        /* 主轴方向 row | row-reverse | column | column-reverse */
+        flex-direction: row;
+
+        /* 是否换行 norwarp<宽度固定，空间不足时，项目尺寸会随之调整并不会换行> ｜ wrap<宽度固定，空间不足时，子节点换行> | wrap-reverse */
+        flex-wrap: nowrap;
+
+        /* flex-direction flex-wrap 的简写 */
+        /* flex-flow: row nowrap; */
+
+        justify-content: baseline;
+
+        align-items: last baseline;
+
+        /* 定义多根轴线的对齐方式 搭配flex-wrap: wrap 使用 */
+        /* align-content: center; */
+      }
+
+      li {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 80px;
+        margin-right: 10px;
+      }
+
+      /* order 定义项目在容器中的排列顺序，数值越小 排列越靠前，默认为0 */
+      /* flex-grow: number flex 元素会子元素的宽度为基础（如果没有宽度，flex-grow: 1 ==> 父级宽度/5 ），沿主轴方向增长尺寸， 自动铺满整个父级的宽度，
+            如果某一个元素flex: grow 2; 将占据 2/5的空间
+            试用场景：子节点不设置宽度，子节点平分父节点的宽度 flex-grow: 1; 子节点的宽度 = 父级宽度 / 子节点的个数
+        */
+
+      li:nth-child(1) {
+        flex-grow: 3;
+        /* flex-shrink: 1; */
+      }
+      li:nth-child(2) {
+        flex-grow: 1;
+      }
+
+      /* 
+
+        li:nth-child(3) {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        li:nth-child(4) {
+            flex-grow: 1;
+        }
+
+        li:nth-child(5) {
+            flex-grow: 1;
+        } */
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ol>
+    </section>
+  </body>
+</html>

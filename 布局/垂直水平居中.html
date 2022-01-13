@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <style>
+      /* 宽度固定 */
+      .fixed-width {
+        position: relative;
+        height: 100vh;
+        border: 1px solid #ccc;
+      }
 
-        /* 宽度固定 */
-        .fixed-width {
-            position: relative;
-            height: 100vh;
-        }
+      .fixed-width div {
+        width: 200px;
+        height: 200px;
+        background-color: transparent;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+      }
 
-        .fixed-width div {
-            width: 200px;
-            height: 200px;
-            background-color: transparent;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -100px;
-            margin-top: -100px;
-        }
+      /* 父级宽度确定 子级宽度未知  */
+      .not-width {
+        width: 500px;
+        height: 500px;
+        border: 1px solid pink;
+        position: relative;
+      }
 
-        /* 父级宽度确定 子级宽度未知  */
-        .not-width {
-            width: 500px;
-            height: 500px;
-            border: 1px solid pink;
-            position: relative;
-        }
-
-        .not-width div {
-            border: 1px solid #000000;
-            position:absolute ;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-
+      .not-width div {
+        border: 1px solid #000000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!--垂直水平居中大致分为两种-->
 
-<!--垂直水平居中大致分为两种-->
-
-<!--固定宽度-->
-<!--<div class="fixed-width">-->
-<!--    <div></div>-->
-<!--</div>-->
-
-<!--宽度未知-->
-<div class="not-width">
-    <div>
-        宽度未知
+    <!--固定宽度-->
+    <div class="fixed-width">
+      <div>固定宽度</div>
     </div>
-</div>
-</body>
+
+    <!--宽度未知-->
+    <div class="not-width">
+      <div>宽度未知</div>
+    </div>
+  </body>
 </html>

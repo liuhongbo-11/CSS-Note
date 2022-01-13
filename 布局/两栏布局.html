@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>两栏布局</title>
+    <!-- No.1 -->
+    <style>
+      /* .left {
+        float: left;
+        width: 200px;
+        background-color: tomato;
+      }
+      .right {
+        width: auto;
+        margin-left: 200px;
+        background-color: orchid;
+      } */
+    </style>
+    <!-- No.2 overflow-->
+    <style>
+      /* .left {
+        float: left;
+        width: 200px;
+        background-color: tomato;
+      }
+      .right {
+        overflow: hidden;
+        background-color: orchid;
+      } */
+    </style>
+    <!-- No.3 flex -->
+    <style>
+      /* .container {
+        display: flex;
+      }
+      .left {
+        width: 200px;
+        background-color: tomato;
+      }
+      .right {
+        flex: 1;
+        background-color: orchid;
+      } */
+    </style>
+    <!-- No.3 -->
+    <style>
+      .container {
+        position: relative;
+      }
+      .left {
+        width: 200px;
+        position: absolute;
+        background-color: tomato;
+      }
+      .right {
+        margin-left: 200px;
+        background-color: orchid;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 两栏布局: 左侧宽度固定、右侧宽度自适应 -->
+    <div class="container">
+      <div class="left">left</div>
+      <div class="right">
+        我们都知道，只要有意义，那么就必须慎重考虑。 既然如何，
+        我们不得不面对一个非常尴尬的事实，那就是，
+        老子曾经说过，知人者智，自知者明。胜人者有力，自胜者强。这不禁令我深思。
+        总结的来说， 既然如何， hello world，到底应该如何实现。
+        就我个人来说，hello world对我的意义，不能不说非常重大。 hello
+        world因何而发生？
+        莎士比亚在不经意间这样说过，抛弃时间的人，时间也抛弃他。这不禁令我深思。
+        经过上述讨论，
+        这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。
+        总结的来说， hello world因何而发生？
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

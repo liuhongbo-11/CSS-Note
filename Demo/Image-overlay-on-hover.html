@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image overlay on hover https://www.30secondsofcode.org/css/s/image-overlay-hover</title>
+    <style>
+        .hover-image {
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            margin: 8px;
+            max-width: 320px;
+            min-width: 240px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hover-image * {
+            box-sizing: border-box;
+            transition: all 0.45s ease;
+        }
+
+        .hover-image ::after,
+        .hover-image::before {
+            background-color: rgba(0, 0, 0, .5);
+            border-top: 32px solid rgba(0, 0, 0, .5);
+            border-bottom: 32px solid rgba(0, 0, 0, .5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: '';
+            transition: all 0.3s ease;
+            z-index: 1;
+            opacity: 0;
+            transform: scaleY(2);
+        }
+
+        .hover-image img {
+            vertical-align: top;
+            max-width: 100%;
+            backface-visibility: hidden;
+        }
+
+        hover-image figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            align-items: center;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.1em;
+            opacity: 0;
+            z-index: 2;
+            transition-delay: 0.1s;
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hover-image:hover:before,
+        .hover-image:hover:after {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .hover-image:hover>img {
+            opacity: 0.7;
+        }
+
+        .hover-image:hover figcaption {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <figure class="hover-image">
+        <img src="https://i.picsum.photos/id/200/440/320.jpg?hmac=ZLuTaf3PtSE3BsVxpyKbjTpEn5ts80TmT1uBGLPhoG8" alt="">
+        <figcaption>
+            <h3>LOREM
+                <br>
+                IPSUM
+            </h3>
+        </figcaption>
+    </figure>
+</body>
+
+</html>

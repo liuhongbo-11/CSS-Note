@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>requestAnimationFrame</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div>box1</div>
+    <script type="text/javascript">
+      // 1000/60 = 16.7  一秒60帧
+      function repeatAften() {
+        // 需要做的事情 16.7ms 改变div的背景颜色
+        let objDiv = document.querySelector("div");
+        objDiv.style.backgroundColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+        let requsetId = requestAnimationFrame(repeatAften);
+
+        // 点击时取消动画
+        objDiv.addEventListener(
+          "click",
+          function () {
+            cancelAnimationFrame(requsetId);
+          },
+          false
+        );
+      }
+
+      requestAnimationFrame(repeatAften);
+    </script>
+  </body>
+</html>
