@@ -44,23 +44,30 @@
         text-align: center;
         line-height: 80px;
         margin-right: 10px;
+
+        /*flex-grow 子容器弹性伸展的比例，简单理解，就是把剩余的空间按比例分配给子容器。*/
+        /*flex-grow: 1;*/
+
+        /*flex-shrink 子容器弹性收缩的比例。简单理解，就是当你子容器超出的部分，会按照对应的比例给子容器减去对应的值*/
       }
 
-      /* order 定义项目在容器中的排列顺序，数值越小 排列越靠前，默认为0 */
-      /* flex-grow: number flex 元素会子元素的宽度为基础（如果没有宽度，flex-grow: 1 ==> 父级宽度/5 ），沿主轴方向增长尺寸， 自动铺满整个父级的宽度，
-            如果某一个元素flex: grow 2; 将占据 2/5的空间
-            试用场景：子节点不设置宽度，子节点平分父节点的宽度 flex-grow: 1; 子节点的宽度 = 父级宽度 / 子节点的个数
-        */
-
       li:nth-child(1) {
-        flex-grow: 3;
+        flex-basis: 500px;
+        flex-shrink: 1;
+        /* flex-grow: 3; */
         /* flex-shrink: 1; */
       }
       li:nth-child(2) {
-        flex-grow: 1;
+        flex-basis: 300px;
+        flex-shrink: 0;
+
+        /*order: 1;*/
+        /*flex-grow: 1;*/
+
+        /* flex-grow: 1; */
       }
 
-      /* 
+      /*
 
         li:nth-child(3) {
             flex-grow: 1;
